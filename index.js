@@ -12,6 +12,7 @@ wechat(config.wechat);
 wechat.createMenu(require('./lib/menu.json'));
 
 app.use('/wxapi', require('./lib/routers/wxapi.js'));
+app.use('/pages', require('./lib/routers/pages.js'));
 
 app.listen(8006, function(err){
     console.log('listenning at 8006...');
