@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+//设置模板目录
+app.set('views', path)
+
 wechat(config.wechat);
 
 wechat.createMenu(require('./lib/menu.json'));
